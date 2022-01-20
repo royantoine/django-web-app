@@ -1,0 +1,14 @@
+<html>
+    <head><title>Listings</title></head>
+    <body>
+        <h1>Listings</h1>
+        <p>
+            Mes items sont :
+            <ul>
+            {% for item in listings_ %}
+            <li>{{ item.title }}</li>
+            {% endfor %}
+            </ul>
+        </p>
+    </body>
+</html>
