@@ -34,3 +34,4 @@ html, body {
    a:active, a:focus {
     color: red;
    }
+   .errorlist { margin-bottom: -10px }
