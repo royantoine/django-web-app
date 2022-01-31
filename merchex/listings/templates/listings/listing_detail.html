@@ -7,15 +7,16 @@
 <ul>
  <li>Vendu : {{ listing.sold|yesno}}</li>
  <li>Année : {{ listing.year }}</li>
- <li>Actif : {{ band.active|yesno }}</li>
- <li>Type : {{ band.type}}</li>
+ <li>Type : {{ listing.type}} </li>
  {% if listing.band %}
-   <li>Groupe : {{ listing.band}}</a></li>
+   <li>Groupe : {{ listing.band}}</li>
  {% endif %}
 </ul>
 
 <p>{{ band.description }}</p>
 
 <a href="{% url 'listings-list' %}">Retour à tous les articles</a>
+<a href="{% url 'listings-update' listing.id %}">Modifier cet article</a>
+<a href="{% url 'listings-delete' listing.id %}">Supprimer cet article</a>
 
 {% endblock %}

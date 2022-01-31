@@ -2,10 +2,15 @@
 
 {% block content %}
 <h1>Listings</h1>
+
+<a href="{% url 'listing-create' %}">Créer un nouveau listing</a>
+
 <p>
     <ul>
         {% for listing in listings_ %}
-        <li><a href="/listings/{{ listing.id }}/">{{ listing.title }}</a></li>
+        <li><a href="/listings/{{ listing.id }}/">{{ listing.title }}</a></li> 
+        - <a href="{% url 'listings-update' listing.id %}">[modifier]</a> 
+        - <a href="{% url 'listings-delete' listing.id %}">[supprimer]</a>
         {% endfor %}
     </ul>
 </p>
